@@ -1,0 +1,46 @@
+#: kivy 1.11.1
+
+<LabelRoboto@Label>:
+    markup: True
+    font_name: "Roboto"
+    font_size: 60
+
+<ButtonRoboto@Button>:
+    font_size: 25
+    font_name: "Roboto"
+    bold: True
+    background_normal: "../img/button_normal.png"
+    background_down: "../img/button_down.png"
+    border: [2] * 4
+
+
+BoxLayout:
+    orientation: "vertical"
+    time_prop: time
+
+    LabelRoboto:
+        id: time
+        text: "[b]0[/b]: 00: 0"
+
+    BoxLayout: 
+        height: 90
+        padding: 20
+        spacing: 20
+        size_hint: (1, None)
+    
+        ButtonRoboto:
+            id: start_stop
+            text: "Start"
+            on_press: app.start_stop()
+    
+        ButtonRoboto:
+            id: reset
+            text: "Reset"
+            on_press: app.reset()
+            background_normal: "../img/red_button_normal.png"
+            background_down: "../img/red_button_down.png"
+    
+    LabelRoboto:
+        id: stopwatch
+        text: "00: 00.[size=40]00[/size]"
+        
