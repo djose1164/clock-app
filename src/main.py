@@ -40,7 +40,7 @@ class ClockApp(App):
         """
         Clock.schedule_interval(self.update, 0)
 
-    def update(self, nap) -> None:
+    def update(self, nap):
         """To update the time show in the clock.
 
         Args:
