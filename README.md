@@ -1,3 +1,3 @@
 # Todo
 
-- [ ] Add documantation.
+- [x] Add documantation.
